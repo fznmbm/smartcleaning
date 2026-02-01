@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy | Smart Cleaning Services Pvt Ltd</title>
-    <meta
-      name="description"
-      content="Privacy Policy for Smart Cleaning Services - How we collect, use, and protect your personal data."
-    />
     <meta name="robots" content="noindex, follow" />
     <link
       rel="icon"
@@ -26,7 +22,6 @@
         --primary-dark: #006978;
         --primary-light: #00acc1;
         --accent: #ff6d00;
-        --accent-dark: #e65100;
         --dark: #1a2f38;
         --text: #455a64;
         --text-light: #78909c;
@@ -35,16 +30,12 @@
         --border: #e0e4e7;
         --font-heading: "Montserrat", sans-serif;
         --font-body: "Open Sans", sans-serif;
-        --shadow-sm:
-          0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
         --shadow-md:
           0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
         --radius-sm: 6px;
         --radius-md: 10px;
-        --radius-lg: 16px;
         --transition: 0.25s ease;
       }
-
       *,
       *::before,
       *::after {
@@ -52,11 +43,6 @@
         margin: 0;
         padding: 0;
       }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
       body {
         font-family: var(--font-body);
         font-size: 16px;
@@ -64,15 +50,12 @@
         color: var(--text);
         background: var(--white);
       }
-
       a {
         color: inherit;
         text-decoration: none;
       }
 
-      /* ═══════════════════════════════════════════════════════════════════════════════
-       HEADER - Exact match to homepage
-    ═══════════════════════════════════════════════════════════════════════════════ */
+      /* Header */
       .header {
         position: fixed;
         top: 0;
@@ -91,8 +74,6 @@
         margin: 0 auto;
         padding: 0 20px;
       }
-
-      /* Logo */
       .logo {
         display: flex;
         align-items: center;
@@ -112,8 +93,6 @@
       .logo-text .highlight {
         color: var(--primary);
       }
-
-      /* Navigation */
       .nav {
         display: flex;
         align-items: center;
@@ -129,27 +108,11 @@
         font-size: 0.9375rem;
         font-weight: 600;
         color: var(--text);
-        padding: 8px 0;
-        position: relative;
-        transition: var(--transition);
-      }
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--primary);
         transition: var(--transition);
       }
       .nav-link:hover {
         color: var(--primary);
       }
-      .nav-link:hover::after {
-        width: 100%;
-      }
-
       .nav-cta {
         display: flex;
         align-items: center;
@@ -162,38 +125,28 @@
         font-family: var(--font-heading);
         font-weight: 700;
         color: var(--primary);
-        white-space: nowrap;
       }
       .nav-phone svg {
         width: 20px;
         height: 20px;
       }
-
-      /* Button */
       .btn {
         display: inline-flex;
         align-items: center;
-        justify-content: center;
         padding: 14px 28px;
         font-family: var(--font-heading);
         font-size: 0.9375rem;
         font-weight: 600;
         border-radius: var(--radius-md);
-        border: 2px solid transparent;
-        transition: var(--transition);
-        white-space: nowrap;
-      }
-      .btn-primary {
+        border: 2px solid var(--primary);
         background: var(--primary);
         color: var(--white);
-        border-color: var(--primary);
+        transition: var(--transition);
       }
-      .btn-primary:hover {
+      .btn:hover {
         background: var(--primary-dark);
         border-color: var(--primary-dark);
       }
-
-      /* Mobile Toggle */
       .mobile-toggle {
         display: none;
         flex-direction: column;
@@ -209,7 +162,6 @@
         height: 2px;
         background: var(--dark);
       }
-
       @media (max-width: 991px) {
         .nav-links,
         .nav-cta {
@@ -220,208 +172,79 @@
         }
       }
 
-      /* ═══════════════════════════════════════════════════════════════════════════════
-       CONTENT
-    ═══════════════════════════════════════════════════════════════════════════════ */
+      /* Content */
       .content {
         padding: 120px 20px 80px;
-        max-width: 900px;
+        max-width: 800px;
         margin: 0 auto;
       }
-
       h1 {
         font-family: var(--font-heading);
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         color: var(--dark);
-        margin-bottom: 16px;
-      }
-
-      .last-updated {
-        color: var(--text-light);
-        margin-bottom: 40px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      h2 {
-        font-family: var(--font-heading);
-        font-size: 1.5rem;
-        color: var(--dark);
-        margin: 40px 0 16px;
-      }
-
-      h3 {
-        font-family: var(--font-heading);
-        font-size: 1.125rem;
-        color: var(--dark);
-        margin: 24px 0 12px;
-      }
-
-      p {
-        margin-bottom: 16px;
-      }
-
-      ul,
-      ol {
-        margin-left: 24px;
-        margin-bottom: 20px;
-      }
-
-      li {
         margin-bottom: 8px;
       }
-
-      strong {
-        color: var(--dark);
+      .last-updated {
+        color: var(--text-light);
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border);
       }
-
+      h2 {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        color: var(--dark);
+        margin: 32px 0 12px;
+      }
+      p {
+        margin-bottom: 12px;
+      }
+      ul {
+        margin-left: 20px;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
       a.link {
         color: var(--primary);
       }
       a.link:hover {
         text-decoration: underline;
       }
-
-      .highlight-box {
+      .info-box {
         background: var(--light);
         border-left: 4px solid var(--primary);
-        padding: 20px 24px;
-        margin: 24px 0;
+        padding: 16px 20px;
+        margin: 20px 0;
         border-radius: 0 8px 8px 0;
       }
-      .highlight-box strong {
-        color: var(--primary-dark);
-      }
 
-      /* ═══════════════════════════════════════════════════════════════════════════════
-       FOOTER - Exact match to homepage
-    ═══════════════════════════════════════════════════════════════════════════════ */
+      /* Footer */
       .footer {
         background: var(--dark);
         color: rgba(255, 255, 255, 0.7);
-        padding: 64px 0 0;
-      }
-      .footer .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      .footer-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding-bottom: 48px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      @media (min-width: 768px) {
-        .footer-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (min-width: 992px) {
-        .footer-grid {
-          grid-template-columns: 1.5fr 1fr 1fr 1fr;
-        }
-      }
-
-      .footer-brand .logo {
-        margin-bottom: 20px;
-      }
-      .footer-brand .logo-text {
-        color: var(--white);
-      }
-      .footer-brand > p {
-        font-size: 0.9375rem;
-        line-height: 1.7;
-        margin-bottom: 24px;
-      }
-      .footer-social {
-        display: flex;
-        gap: 12px;
-      }
-      .footer-social a {
-        width: 40px;
-        height: 40px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: var(--radius-sm);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: var(--transition);
-      }
-      .footer-social a:hover {
-        background: var(--primary);
-      }
-      .footer-social svg {
-        width: 18px;
-        height: 18px;
-        fill: var(--white);
-      }
-
-      .footer-column h4 {
-        color: var(--white);
-        font-family: var(--font-heading);
-        font-size: 1rem;
-        margin-bottom: 20px;
-      }
-      .footer-links {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .footer-links a {
-        font-size: 0.9375rem;
-        transition: var(--transition);
-      }
-      .footer-links a:hover {
-        color: var(--white);
-      }
-
-      .footer-bottom {
-        padding: 24px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
+        padding: 32px 0;
         text-align: center;
       }
-      @media (min-width: 768px) {
-        .footer-bottom {
-          flex-direction: row;
-          justify-content: space-between;
-        }
+      .footer a {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0 12px;
       }
-      .footer-bottom p {
-        font-size: 0.875rem;
-      }
-      .footer-legal {
-        display: flex;
-        gap: 24px;
-        font-size: 0.875rem;
-      }
-      .footer-legal a:hover {
+      .footer a:hover {
         color: var(--white);
       }
-
       .footer-credit {
-        text-align: center;
-        padding: 16px 0 24px;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         font-size: 0.8rem;
         color: rgba(255, 255, 255, 0.5);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 16px;
-      }
-      .footer-credit a {
-        color: rgba(255, 255, 255, 0.7);
-        transition: var(--transition);
-      }
-      .footer-credit a:hover {
-        color: var(--white);
       }
 
       @media (max-width: 600px) {
         h1 {
-          font-size: 2rem;
+          font-size: 1.75rem;
         }
         .logo-text {
           font-size: 1.1rem;
@@ -430,9 +253,6 @@
     </style>
   </head>
   <body>
-    <!-- ═══════════════════════════════════════════════════════════════════════════════
-     HEADER - Same as homepage
-═══════════════════════════════════════════════════════════════════════════════ -->
     <header class="header">
       <div class="header-inner">
         <a href="index.html" class="logo">
@@ -446,7 +266,6 @@
             <span class="highlight">Services Pvt Ltd</span></span
           >
         </a>
-
         <nav class="nav">
           <ul class="nav-links">
             <li><a href="index.html#services" class="nav-link">Services</a></li>
@@ -458,7 +277,6 @@
             <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
             <li><a href="index.html#contact" class="nav-link">Contact</a></li>
           </ul>
-
           <div class="nav-cta">
             <a href="tel:07490961248" class="nav-phone">
               <svg
@@ -473,348 +291,87 @@
               </svg>
               <span>07490 961 248</span>
             </a>
-            <a href="index.html#contact" class="btn btn-primary">Get Quote</a>
+            <a href="index.html#contact" class="btn">Get Quote</a>
           </div>
         </nav>
-
         <button class="mobile-toggle" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </header>
 
-    <!-- ═══════════════════════════════════════════════════════════════════════════════
-     CONTENT
-═══════════════════════════════════════════════════════════════════════════════ -->
     <main class="content">
       <h1>Privacy Policy</h1>
       <p class="last-updated">Last updated: January 2025</p>
 
       <p>
-        Smart Cleaning Services Pvt Ltd ("we", "us", or "our") is committed to
-        protecting your privacy. This Privacy Policy explains how we collect,
-        use, disclose, and safeguard your information when you visit our website
-        or use our services.
+        Smart Cleaning Services Pvt Ltd is committed to protecting your privacy.
+        This policy explains how we handle your personal information.
       </p>
 
-      <div class="highlight-box">
-        <strong>Data Controller:</strong><br />
-        Smart Cleaning Services Pvt Ltd<br />
-        Crawley, West Sussex, RH10 1BQ<br />
-        Email: smartcleanpvt@yahoo.com<br />
-        Phone: 07490 961 248
+      <div class="info-box">
+        <strong>Contact Us:</strong> smartcleanpvt@yahoo.com | 07490 961 248<br />
+        Crawley, West Sussex, RH10 1BQ
       </div>
 
-      <h2>1. Information We Collect</h2>
-
-      <h3>Personal Information</h3>
+      <h2>What We Collect</h2>
       <p>
-        We may collect personal information that you voluntarily provide when
-        you:
+        When you contact us or book a service, we may collect your name, phone
+        number, email, address, and details about your cleaning requirements.
       </p>
-      <ul>
-        <li>Fill out a contact or quote request form</li>
-        <li>Book a cleaning service</li>
-        <li>Subscribe to our newsletter</li>
-        <li>Contact us via phone, email, or WhatsApp</li>
-      </ul>
 
-      <p>This information may include:</p>
-      <ul>
-        <li>Name</li>
-        <li>Email address</li>
-        <li>Phone number</li>
-        <li>Postal address or postcode</li>
-        <li>Details about your property and cleaning requirements</li>
-      </ul>
-
-      <h3>Automatically Collected Information</h3>
+      <h2>How We Use It</h2>
       <p>
-        When you visit our website, we may automatically collect certain
-        information, including:
+        We use your information to provide quotes, deliver cleaning services,
+        communicate with you, and improve our services. We only send marketing
+        with your consent.
       </p>
-      <ul>
-        <li>IP address</li>
-        <li>Browser type and version</li>
-        <li>Pages visited and time spent</li>
-        <li>Referring website</li>
-        <li>Device information</li>
-      </ul>
 
-      <h2>2. How We Use Your Information</h2>
-      <p>We use your personal information for the following purposes:</p>
-      <ul>
-        <li>
-          <strong>To provide our services:</strong> Process bookings, provide
-          quotes, and deliver cleaning services
-        </li>
-        <li>
-          <strong>To communicate with you:</strong> Respond to enquiries, send
-          booking confirmations, and provide customer support
-        </li>
-        <li>
-          <strong>To improve our services:</strong> Analyse how our website is
-          used and enhance user experience
-        </li>
-        <li>
-          <strong>To send marketing communications:</strong> Only with your
-          explicit consent, and you can opt out at any time
-        </li>
-        <li>
-          <strong>To comply with legal obligations:</strong> Meet our legal and
-          regulatory requirements
-        </li>
-      </ul>
-
-      <h2>3. Legal Basis for Processing (GDPR)</h2>
+      <h2>Who We Share With</h2>
       <p>
-        Under the UK General Data Protection Regulation (UK GDPR), we process
-        your data based on:
+        We do not sell your data. We may share information with service
+        providers who help run our business (like email or payment services) and
+        when required by law.
       </p>
-      <ul>
-        <li>
-          <strong>Contractual necessity:</strong> To fulfil our cleaning service
-          agreement with you
-        </li>
-        <li>
-          <strong>Legitimate interests:</strong> To operate and improve our
-          business
-        </li>
-        <li>
-          <strong>Consent:</strong> For marketing communications (which you can
-          withdraw at any time)
-        </li>
-        <li>
-          <strong>Legal obligation:</strong> To comply with applicable laws
-        </li>
-      </ul>
 
-      <h2>4. Data Sharing and Disclosure</h2>
+      <h2>Your Rights</h2>
       <p>
-        We do not sell, trade, or rent your personal information to third
-        parties. We may share your information with:
-      </p>
-      <ul>
-        <li>
-          <strong>Service providers:</strong> Third-party services that help us
-          operate our business (e.g., email services, payment processors)
-        </li>
-        <li>
-          <strong>Legal requirements:</strong> When required by law or to
-          protect our rights
-        </li>
-      </ul>
-
-      <h2>5. Data Retention</h2>
-      <p>
-        We retain your personal information only for as long as necessary to
-        fulfil the purposes outlined in this policy, unless a longer retention
-        period is required by law. Typically:
-      </p>
-      <ul>
-        <li>
-          Customer records: 6 years after last transaction (for tax purposes)
-        </li>
-        <li>Marketing data: Until you unsubscribe or withdraw consent</li>
-        <li>Website analytics: 26 months</li>
-      </ul>
-
-      <h2>6. Your Rights</h2>
-      <p>Under UK GDPR, you have the following rights:</p>
-      <ul>
-        <li>
-          <strong>Right of access:</strong> Request a copy of your personal data
-        </li>
-        <li>
-          <strong>Right to rectification:</strong> Request correction of
-          inaccurate data
-        </li>
-        <li>
-          <strong>Right to erasure:</strong> Request deletion of your data
-          ("right to be forgotten")
-        </li>
-        <li>
-          <strong>Right to restrict processing:</strong> Request limitation on
-          how we use your data
-        </li>
-        <li>
-          <strong>Right to data portability:</strong> Request transfer of your
-          data to another service
-        </li>
-        <li>
-          <strong>Right to object:</strong> Object to processing based on
-          legitimate interests or for marketing
-        </li>
-        <li>
-          <strong>Right to withdraw consent:</strong> Withdraw consent at any
-          time for consent-based processing
-        </li>
-      </ul>
-
-      <p>
-        To exercise any of these rights, please contact us at
+        You can request access to, correction of, or deletion of your personal
+        data at any time by emailing
         <a href="mailto:smartcleanpvt@yahoo.com" class="link"
           >smartcleanpvt@yahoo.com</a
         >.
       </p>
 
-      <h2>7. Cookies</h2>
-      <p>
-        Our website does not use cookies for tracking or advertising purposes.
-        We use only essential technologies required for the website to function
-        properly. No cookie consent is required as we do not collect data
-        through cookies.
-      </p>
+      <h2>Cookies</h2>
+      <p>Our website does not use tracking cookies.</p>
 
-      <h2>8. Data Security</h2>
+      <h2>Questions?</h2>
       <p>
-        We implement appropriate technical and organisational measures to
-        protect your personal information against unauthorised access,
-        alteration, disclosure, or destruction. However, no internet
-        transmission is completely secure, and we cannot guarantee absolute
-        security.
-      </p>
-
-      <h2>9. Third-Party Links</h2>
-      <p>
-        Our website may contain links to third-party websites. We are not
-        responsible for the privacy practices of these external sites. We
-        encourage you to read their privacy policies.
-      </p>
-
-      <h2>10. Children's Privacy</h2>
-      <p>
-        Our services are not directed to individuals under 18. We do not
-        knowingly collect personal information from children.
-      </p>
-
-      <h2>11. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. The updated version
-        will be indicated by the "Last updated" date at the top. We encourage
-        you to review this policy periodically.
-      </p>
-
-      <h2>12. Contact Us</h2>
-      <p>
-        If you have questions about this Privacy Policy or wish to exercise your
-        rights, please contact us:
-      </p>
-
-      <div class="highlight-box">
-        <strong>Smart Cleaning Services Pvt Ltd</strong><br />
-        Email:
+        Contact us at
         <a href="mailto:smartcleanpvt@yahoo.com" class="link"
           >smartcleanpvt@yahoo.com</a
-        ><br />
-        Phone: <a href="tel:07490961248" class="link">07490 961 248</a><br />
-        Address: Crawley, West Sussex, RH10 1BQ
-      </div>
-
-      <p>
-        You also have the right to lodge a complaint with the Information
-        Commissioner's Office (ICO) if you believe your data protection rights
-        have been violated:
+        >
+        or call <a href="tel:07490961248" class="link">07490 961 248</a>. You
+        can also contact the ICO at
         <a href="https://ico.org.uk" target="_blank" rel="noopener" class="link"
           >ico.org.uk</a
-        >
+        >.
       </p>
     </main>
 
-    <!-- ═══════════════════════════════════════════════════════════════════════════════
-     FOOTER - Same as homepage
-═══════════════════════════════════════════════════════════════════════════════ -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="index.html" class="logo">
-              <img
-                src="logo/logo-white.png"
-                alt="Smart Cleaning Services"
-                class="logo-image"
-              />
-              <span class="logo-text"
-                >Smart Cleaning
-                <span class="highlight">Services Pvt Ltd</span></span
-              >
-            </a>
-            <p>
-              Professional cleaning services for homes and businesses across
-              Crawley and West Sussex. Fully insured and committed to
-              excellence.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://facebook.com/smartcleaningservices"
-                target="_blank"
-                rel="noopener"
-                aria-label="Facebook"
-              >
-                <svg fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://instagram.com/smartcleaningservices"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-              >
-                <svg fill="currentColor" viewBox="0 0 24 24">
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <path
-                    d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="footer-column">
-            <h4>Services</h4>
-            <nav class="footer-links">
-              <a href="index.html#services">Residential Cleaning</a>
-              <a href="index.html#services">Commercial Cleaning</a>
-              <a href="index.html#services">Deep Cleaning</a>
-              <a href="index.html#services">End of Tenancy</a>
-            </nav>
-          </div>
-          <div class="footer-column">
-            <h4>Company</h4>
-            <nav class="footer-links">
-              <a href="index.html#benefits">About Us</a>
-              <a href="index.html#testimonials">Reviews</a>
-              <a href="index.html#areas">Service Areas</a>
-              <a href="index.html#faq">FAQ</a>
-              <a href="index.html#contact">Contact</a>
-            </nav>
-          </div>
-          <div class="footer-column">
-            <h4>Contact</h4>
-            <nav class="footer-links">
-              <a href="tel:07490961248">07490 961 248</a>
-              <a href="mailto:smartcleanpvt@yahoo.com"
-                >smartcleanpvt@yahoo.com</a
-              >
-              <span>Crawley, RH10 1BQ</span>
-            </nav>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2025 Smart Cleaning Services Pvt Ltd. All rights reserved.</p>
-          <nav class="footer-legal">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-of-service.html">Terms of Service</a>
-          </nav>
-        </div>
-        <div class="footer-credit">
-          Developed by
-          <a href="https://elitestack.co.uk" target="_blank" rel="noopener"
-            >elitestack.co.uk</a
-          >
-        </div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+      <p style="margin-top: 16px">© 2025 Smart Cleaning Services Pvt Ltd</p>
+      <div class="footer-credit">
+        Developed by
+        <a href="https://elitestack.co.uk" target="_blank" rel="noopener"
+          >elitestack.co.uk</a
+        >
       </div>
     </footer>
   </body>
