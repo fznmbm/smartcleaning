@@ -26,57 +26,6 @@
     />
   </head>
   <body>
-    <script>
-      // Maintenance Mode - Set MAINTENANCE_MODE in Vercel Environment Variables
-      // In Vercel: Settings > Environment Variables > Add NEXT_PUBLIC_MAINTENANCE = "true"
-      const MAINTENANCE_MODE =
-        "%NEXT_PUBLIC_MAINTENANCE%" === "true" ||
-        localStorage.getItem("maintenance") === "true";
-
-      if (MAINTENANCE_MODE) {
-        document.documentElement.innerHTML = `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Maintenance | Smart Cleaning Services</title>
-        <style>
-          * { margin: 0; padding: 0; box-sizing: border-box; }
-          body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #00838F 0%, #006978 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-          }
-          .maintenance-box {
-            max-width: 500px;
-          }
-          .icon { font-size: 4rem; margin-bottom: 20px; }
-          h1 { font-size: 2rem; margin-bottom: 16px; }
-          p { opacity: 0.9; line-height: 1.6; margin-bottom: 24px; }
-          a { color: white; font-weight: 600; }
-        </style>
-      </head>
-      <body>
-        <div class="maintenance-box">
-          <div class="icon">🧹</div>
-          <h1>We'll Be Right Back!</h1>
-          <p>We're currently performing scheduled maintenance to improve our services. Please check back shortly.</p>
-          <p>Need urgent help? Call <a href="tel:07490961248">07490 961 248</a></p>
-        </div>
-      </body>
-      </html>
-    `;
-        throw new Error("Maintenance mode active");
-      }
-    </script>
-
     <!--
 ╔════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                ║
@@ -95,6 +44,8 @@
 
     <script>
       const CONFIG = {
+        maintenanceMode: true, // ← Add this at the top
+
         // ╔═══════════════════════════════════════════════════════════════════════════╗
         // ║  LOGO & BRANDING                                                          ║
         // ╠═══════════════════════════════════════════════════════════════════════════╣
@@ -505,6 +456,20 @@
           border: "#E0E4E7",
         },
       };
+
+      if (CONFIG.maintenanceMode) {
+        document.body.innerHTML = `
+    <div style="font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #00838F 0%, #006978 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px;">
+      <div style="max-width: 500px;">
+        <div style="font-size: 4rem; margin-bottom: 20px;">🧹</div>
+        <h1 style="font-size: 2rem; margin-bottom: 16px;">We'll Be Right Back!</h1>
+        <p style="opacity: 0.9; line-height: 1.6; margin-bottom: 24px;">We're currently performing scheduled maintenance. Please check back shortly.</p>
+        <p>Need urgent help? Call <a href="tel:07490961248" style="color: white; font-weight: 600;">07490 961 248</a></p>
+      </div>
+    </div>
+  `;
+        throw new Error("Maintenance");
+      }
 
       // ════════════════════════════════════════════════════════════════════════════════
       // ██████╗  ██████╗     ███╗   ██╗ ██████╗ ████████╗    ███████╗██████╗ ██╗████████╗
