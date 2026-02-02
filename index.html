@@ -26,7 +26,7 @@
     />
   </head>
   <body>
-    <script>
+    <!-- <script>
       // MAINTENANCE MODE - Check this FIRST before anything loads
       const MAINTENANCE = true; // Set to true to enable
       if (MAINTENANCE) {
@@ -50,7 +50,7 @@
       </html>`);
         document.close();
       }
-    </script>
+    </script> -->
 
     <!--
 ╔════════════════════════════════════════════════════════════════════════════════╗
@@ -70,6 +70,9 @@
 
     <script>
       const CONFIG = {
+        // MAINTENANCE MODE - Set to true to enable maintenance page
+        maintenanceMode: true,
+
         // ╔═══════════════════════════════════════════════════════════════════════════╗
         // ║  LOGO & BRANDING                                                          ║
         // ╠═══════════════════════════════════════════════════════════════════════════╣
@@ -2537,6 +2540,20 @@
       document.addEventListener("DOMContentLoaded", init);
 
       function init() {
+        if (CONFIG.maintenanceMode) {
+          document.body.innerHTML = `
+      <div style="font-family:'Montserrat',sans-serif;background:linear-gradient(135deg,#00838F,#006978);min-height:100vh;display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:20px;">
+        <div style="max-width:500px;">
+          <div style="font-size:4rem;margin-bottom:20px;">🧹</div>
+          <h1 style="font-size:2rem;margin-bottom:16px;">We'll Be Right Back!</h1>
+          <p style="opacity:0.9;line-height:1.6;margin-bottom:24px;">We're currently performing scheduled maintenance. Please check back shortly.</p>
+          <p>Need urgent help? Call <a href="tel:${CONFIG.phone.replace(/\s/g, "")}" style="color:white;font-weight:600;">${CONFIG.phone}</a></p>
+        </div>
+      </div>`;
+          document.head.innerHTML += "<style>body{margin:0;}</style>";
+          return;
+        }
+
         applyColors();
         applySEO();
         buildLogo();
