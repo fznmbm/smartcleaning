@@ -449,30 +449,19 @@
       }
       .footer-bottom {
         padding: 24px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
         text-align: center;
-      }
-      @media (min-width: 768px) {
-        .footer-bottom {
-          flex-direction: row;
-          justify-content: space-between;
-        }
       }
       .footer-bottom p {
         font-size: 0.875rem;
       }
-      .footer-legal {
-        display: flex;
-        gap: 24px;
-        font-size: 0.875rem;
+      .footer-bottom a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: var(--transition);
       }
-      .footer-legal a:hover {
+      .footer-bottom a:hover {
         color: var(--white);
       }
-      .footer-credit {
+      /* .footer-credit {
         text-align: center;
         padding: 16px 0 24px;
         font-size: 0.8rem;
@@ -486,7 +475,7 @@
       }
       .footer-credit a:hover {
         color: var(--white);
-      }
+      } */
 
       @media (max-width: 600px) {
         .page-content h1 {
@@ -720,6 +709,8 @@
               <a href="index.html#areas">Service Areas</a>
               <a href="index.html#faq">FAQ</a>
               <a href="index.html#contact">Contact</a>
+              <a href="privacy-policy.html">Privacy Policy</a>
+              <a href="terms-of-service.html">Terms of Service</a>
             </nav>
           </div>
           <div class="footer-column">
@@ -735,17 +726,13 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2025 Smart Cleaning Services Pvt Ltd. All rights reserved.</p>
-          <nav class="footer-legal">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-of-service.html">Terms of Service</a>
-          </nav>
-        </div>
-        <div class="footer-credit">
-          Developed by
-          <a href="https://elitestack.co.uk" target="_blank" rel="noopener"
-            >elitestack.co.uk</a
-          >
+          <p>
+            © 2025 Smart Cleaning Services Pvt Ltd. All rights reserved. ·
+            Developed by
+            <a href="https://elitestack.co.uk" target="_blank" rel="noopener"
+              >elitestack.co.uk</a
+            >
+          </p>
         </div>
       </div>
     </footer>
