@@ -1789,20 +1789,27 @@
       /* Footer Bottom */
       .footer-bottom {
         padding: 24px 0;
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        gap: 16px; */
         text-align: center;
       }
-      @media (min-width: 768px) {
+      /* @media (min-width: 768px) {
         .footer-bottom {
           flex-direction: row;
           justify-content: space-between;
         }
-      }
+      } */
       .footer-bottom p {
         font-size: 0.875rem;
+      }
+      .footer-bottom a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: var(--transition);
+      }
+      .footer-bottom a:hover {
+        color: var(--white);
       }
       .footer-legal {
         display: flex;
@@ -1813,7 +1820,7 @@
         color: var(--white);
       }
 
-      .footer-credit {
+      /* .footer-credit {
         text-align: center;
         padding: 16px 0 24px;
         font-size: 0.8rem;
@@ -1827,7 +1834,7 @@
       }
       .footer-credit a:hover {
         color: var(--white);
-      }
+      } */
       /* ═══════════════════════════════════════════════════════════════════════════════
    MOBILE MENU
 ═══════════════════════════════════════════════════════════════════════════════ */
@@ -2512,6 +2519,8 @@
               <a href="#areas">Service Areas</a>
               <a href="#faq">FAQ</a>
               <a href="#contact">Contact</a>
+              <a href="privacy-policy.html">Privacy Policy</a>
+              <a href="terms-of-service.html">Terms of Service</a>
             </nav>
           </div>
           <div class="footer-column">
@@ -2521,18 +2530,18 @@
         </div>
         <div class="footer-bottom">
           <p id="footer-copyright"></p>
-          <nav class="footer-legal">
+          <!-- <nav class="footer-legal">
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="terms-of-service.html">Terms of Service</a>
-          </nav>
+          </nav> -->
         </div>
 
-        <div class="footer-credit">
+        <!-- <div class="footer-credit">
           Developed by
           <a href="https://elitestack.co.uk" target="_blank" rel="noopener"
             >elitestack.co.uk</a
           >
-        </div>
+        </div> -->
       </div>
     </footer>
 
@@ -2975,8 +2984,8 @@
     ${footerAddressLines.map((line) => `<span>${line}</span>`).join("")}
   `;
 
-        document.getElementById("footer-copyright").textContent =
-          `© ${new Date().getFullYear()} ${companyName} ${companyNameHighlight}. All rights reserved.`;
+        document.getElementById("footer-copyright").innerHTML =
+          `© ${new Date().getFullYear()} ${companyName} ${companyNameHighlight}. All rights reserved. · Developed by <a href="https://elitestack.co.uk" target="_blank" rel="noopener">elitestack.co.uk</a>`;
       }
 
       // WhatsApp
