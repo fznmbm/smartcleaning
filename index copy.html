@@ -282,24 +282,6 @@
           ],
         },
 
-        // After the benefits closing brace, add:
-
-        teamInAction: {
-          sectionTitle: "Our Professional Team in Action",
-          caption:
-            "Our trained and insured cleaning professionals delivering high-quality commercial cleaning across Crawley & West Sussex.",
-          images: [
-            {
-              src: "images/team-action-1.jpg",
-              alt: "Smart Cleaning Services team cleaning office",
-            },
-            {
-              src: "images/team-action-2.jpg",
-              alt: "Smart Cleaning Services staff at work",
-            },
-          ],
-        },
-
         // ╔═══════════════════════════════════════════════════════════════════════════╗
         // ║  HOW IT WORKS (Process steps)                                             ║
         // ╚═══════════════════════════════════════════════════════════════════════════╝
@@ -1242,44 +1224,6 @@
         font-size: 0.9375rem;
         color: var(--text-light);
         line-height: 1.6;
-      }
-
-      /* TEAM IN ACTION */
-      .team-action {
-        background: var(--light);
-      }
-      .team-action-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      @media (min-width: 768px) {
-        .team-action-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      .team-action-image {
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        box-shadow: var(--shadow-md);
-      }
-      .team-action-image img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-      }
-      .team-action-image:hover img {
-        transform: scale(1.03);
-      }
-      .team-action-caption {
-        text-align: center;
-        margin-top: 32px;
-        font-size: 1.0625rem;
-        color: var(--text-light);
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
       }
 
       /* ═══════════════════════════════════════════════════════════════════════════════
@@ -2370,17 +2314,6 @@
       </div>
     </section>
 
-    <!-- TEAM IN ACTION -->
-    <section class="team-action section" id="team-action">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="team-action-title"></h2>
-        </div>
-        <div class="team-action-grid" id="team-action-grid"></div>
-        <p class="team-action-caption" id="team-action-caption"></p>
-      </div>
-    </section>
-
     <!-- ═══════════════════════════════════════════════════════════════════════════════
      PROCESS
 ═══════════════════════════════════════════════════════════════════════════════ -->
@@ -2661,7 +2594,6 @@
         buildTrustBar();
         buildServices();
         buildBenefits();
-        buildTeamInAction();
         buildProcess();
         buildTestimonials();
         buildAreas();
@@ -2866,28 +2798,6 @@
   `,
           )
           .join("");
-      }
-
-      // Team In Action
-      function buildTeamInAction() {
-        const { teamInAction } = CONFIG;
-        if (!teamInAction) return;
-
-        document.getElementById("team-action-title").textContent =
-          teamInAction.sectionTitle;
-        document.getElementById("team-action-caption").textContent =
-          teamInAction.caption;
-
-        document.getElementById("team-action-grid").innerHTML =
-          teamInAction.images
-            .map(
-              (img) => `
-    <div class="team-action-image">
-      <img src="${img.src}" alt="${img.alt}" loading="lazy">
-    </div>
-  `,
-            )
-            .join("");
       }
 
       // Process
