@@ -2571,10 +2571,12 @@
           <div class="footer-column">
             <h4>Services</h4>
             <nav class="footer-links">
-              <a href="#services">Residential Cleaning</a>
-              <a href="#services">Commercial Cleaning</a>
-              <a href="#services">Deep Cleaning</a>
-              <a href="#services">End of Tenancy</a>
+              <a href="house-cleaning-crawley.html">Residential Cleaning</a>
+              <a href="commercial-cleaning-crawley.html">Commercial Cleaning</a>
+              <a href="office-cleaning-crawley.html">Office Cleaning</a>
+              <a href="deep-cleaning-crawley.html">Deep Cleaning</a>
+              <a href="end-of-tenancy-cleaning-crawley.html">End of Tenancy</a>
+              <a href="school-cleaning-crawley.html">School Cleaning</a>
             </nav>
           </div>
           <div class="footer-column">
@@ -2818,23 +2820,23 @@
           '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>';
 
         document.getElementById("services-grid").innerHTML = `
-    <div class="service-card">
-      <div class="service-icon">${services.residential.icon}</div>
-      <h3>${services.residential.title}</h3>
-      <p>${services.residential.description}</p>
-      <ul class="service-features">${services.residential.features.map((f) => `<li>${checkIcon}${f}</li>`).join("")}</ul>
-      <div class="service-price">${services.residential.price}</div>
-      <a href="#contact" class="btn btn-secondary">Get Quote</a>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">${services.commercial.icon}</div>
-      <h3>${services.commercial.title}</h3>
-      <p>${services.commercial.description}</p>
-      <ul class="service-features">${services.commercial.features.map((f) => `<li>${checkIcon}${f}</li>`).join("")}</ul>
-      <div class="service-price">${services.commercial.price}</div>
-      <a href="#contact" class="btn btn-secondary">Get Quote</a>
-    </div>
-  `;
+  <div class="service-card">
+    <div class="service-icon">${services.residential.icon}</div>
+    <h3>${services.residential.title}</h3>
+    <p>${services.residential.description}</p>
+    <ul class="service-features">${services.residential.features.map((f) => `<li>${checkIcon}${f}</li>`).join("")}</ul>
+    <div class="service-price">${services.residential.price}</div>
+    <a href="house-cleaning-crawley.html" class="btn btn-secondary">Learn More</a>
+  </div>
+  <div class="service-card">
+    <div class="service-icon">${services.commercial.icon}</div>
+    <h3>${services.commercial.title}</h3>
+    <p>${services.commercial.description}</p>
+    <ul class="service-features">${services.commercial.features.map((f) => `<li>${checkIcon}${f}</li>`).join("")}</ul>
+    <div class="service-price">${services.commercial.price}</div>
+    <a href="commercial-cleaning-crawley.html" class="btn btn-secondary">Learn More</a>
+  </div>
+`;
       }
 
       // Benefits
