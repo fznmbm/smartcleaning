@@ -322,9 +322,29 @@
         }
       }
 
+      /* Page Hero */
+      .page-hero {
+        padding: 140px 0 60px;
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: var(--white);
+        text-align: center;
+      }
+      .page-hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        font-weight: 800;
+        color: var(--white);
+        margin-bottom: 0;
+      }
+
       /* Page Content */
       .page-content {
-        padding: 120px 20px 80px;
+        /* padding: 120px 20px 80px; */
+        padding: 60px 20px 80px;
         max-width: 800px;
         margin: 0 auto;
       }
@@ -580,8 +600,13 @@
     </div>
 
     <!-- Page Content -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Privacy Policy</h1>
+      </div>
+    </section>
+
     <main class="page-content">
-      <h1>Privacy Policy</h1>
       <p class="last-updated">Last updated: January 2025</p>
 
       <p>
